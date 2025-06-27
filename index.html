@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Auto Express | Vehicle Shipping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo" id="logo">
+            <i class="fas fa-shipping-fast"></i>
+            <h1>Global Auto Express</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#"><i class="fas fa-route"></i> Services</a></li>
+                <li><a href="#"><i class="fas fa-phone-alt"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Landing Page -->
+    <main id="landing-page">
+        <section class="hero">
+            <i class="fas fa-car hero-icon"></i>
+            <h2>Worldwide Vehicle Shipping Solutions</h2>
+            <p>Trusted by thousands of customers for safe and efficient international car transport</p>
+            
+            <div class="tracking-form">
+                <h3><i class="fas fa-search-location"></i> Track Your Shipment</h3>
+                <div class="form-group">
+                    <label for="tracking-id"><i class="fas fa-barcode"></i> Enter Your Tracking ID</label>
+                    <input type="text" id="tracking-id" placeholder="e.g. HUY-781255648" required>
+                    <div id="tracking-error" class="error-message"></div>
+                </div>
+                <button class="btn" id="track-btn">
+                    <i class="fas fa-search"></i> Track Shipment
+                </button>
+                <p class="tracking-hint">
+                    <i class="fas fa-info-circle"></i> Enter your tracking ID to view shipment status and details.
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-globe-americas"></i>
+                    <h4>Global Coverage</h4>
+                    <p>We ship vehicles to over 150 countries worldwide with reliable partners and efficient logistics.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Safe & Secure</h4>
+                    <p>Your vehicle is fully insured during transit. We use specialized containers and handling equipment.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-stopwatch"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>Optimized shipping routes and customs clearance ensure timely delivery of your vehicle.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Our dedicated support team is available around the clock to assist with your shipping needs.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tracking Results Page -->
+    <section id="tracking-page" class="tracking-page">
+        <div class="tracking-container">
+            <div class="tracking-header">
+                <h2><i class="fas fa-map-marked-alt"></i> Shipment Tracking Details</h2>
+                <button class="btn btn-outline back-to-landing">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </button>
+            </div>
+
+            <!-- Shipment Status Section -->
+            <div class="status-container">
+                <div class="status-header">
+                    <div>
+                        <h3>Tracking ID: <span class="tracking-id-display"></span></h3>
+                    </div>
+                    <div class="status-badge">
+                        <i class="fas fa-truck-moving"></i> <span id="status-text">In Transit</span>
+                    </div>
+                </div>
+
+                <div class="status-bar">
+                    <div class="status-progress" id="status-progress"></div>
+                </div>
+
+                <div class="status-steps">
+                    <div class="status-step active">
+                        <i class="fas fa-clipboard-check"></i>
+                        <div>Processing</div>
+                        <small class="step-date">June 20, 2025</small>
+                    </div>
+                    <div class="status-step active">
+                        <i class="fas fa-box"></i>
+                        <div>Picked Up</div>
+                        <small class="step-date">June 21, 2025</small>
+                    </div>
+                    <div class="status-step active">
+                        <i class="fas fa-ship"></i>
+                        <div>In Transit</div>
+                        <small class="step-date">June 22, 2025</small>
+                    </div>
+                    <div class="status-step">
+                        <i class="fas fa-warehouse"></i>
+                        <div>Arrival</div>
+                        <small class="step-date">Estimated: July 8, 2025</small>
+                    </div>
+                    <div class="status-step">
+                        <i class="fas fa-home"></i>
+                        <div>Delivered</div>
+                        <small class="step-date">Estimated: July 10, 2025</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Notice Section -->
+            <div class="payment-notice">
+                <h3><i class="fas fa-exclamation-circle"></i> Payment Required for Final Delivery</h3>
+                <p>Your shipment will be held at the destination port until the following payments are settled:</p>
+                
+                <div class="fee-details">
+                    <div class="fee-item">
+                        <div>Import Duty</div>
+                        <div class="amount">$650.00</div>
+                    </div>
+                    <div class="fee-item">
+                        <div>Customs Processing</div>
+                        <div class="amount">$350.00</div>
+                    </div>
+                    <!-- <div class="fee-item">
+                        <div>Port Handling</div>
+                        <div class="amount">$450.00</div>
+                    </div>
+                    <div class="fee-item">
+                        <div>Transport Surcharge</div>
+                        <div class="amount">$300.00</div>
+                    </div> -->
+                </div>
+                
+                <div class="total-due">
+                    <div>Total Amount Due:</div>
+                    <div class="value">$1,000.00</div>
+                </div>
+                
+                <p><i class="fas fa-info-circle"></i> Please complete payment within <strong>7 business days</strong> to avoid storage fees. Your vehicle will be released for final delivery upon payment confirmation.</p>
+                
+                <button class="btn btn-pay">
+                    <i class="fas fa-credit-card"></i> Pay Now
+                </button>
+                
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #aaa;">
+                    <i class="fas fa-phone"></i> Contact support for payment assistance
+                </p>
+            </div>
+
+            <!-- Car Images Section -->
+            <h3><i class="fas fa-camera"></i> Vehicle Images</h3>
+            <div class="car-images" id="car-images">
+                <!-- Images will be populated by JavaScript -->
+            </div>
+
+            <!-- Tracking Details Section -->
+            <div class="tracking-details">
+                <div class="detail-card">
+                    <h3><i class="fas fa-info-circle"></i> Shipment Details</h3>
+                    <ul id="shipment-details">
+                        <!-- Details populated by JavaScript -->
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Timeline</h3>
+                    <ul id="timeline-details">
+                        <!-- Timeline populated by JavaScript -->
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3><i class="fas fa-map-marked-alt"></i> Current Location</h3>
+                    <ul id="location-details">
+                        <!-- Location details populated by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Global Auto Express</h3>
+                <p>Your trusted partner for international vehicle shipping since 2005. We make global car transport simple and reliable.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="nav-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Tracking</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Car Shipping</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Boat Transport</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Motorcycle Shipping</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Heavy Equipment</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Door-to-Door Delivery</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 42 Shipping Lane, Miami, FL 33101</li>
+                    <li><i class="fas fa-phone"></i> +1 (404) 621-3077</li>
+                    <li><i class="fas fa-envelope"></i> infoglobalshippingcorp@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 8AM - 8PM EST</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Global Auto Express. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!--Start of Tawk.to Script-->
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/684a3dd4c2de78190f3142ee/1ith032er';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+    <!--End of Tawk.to Script-->
+</body>
+</html>
